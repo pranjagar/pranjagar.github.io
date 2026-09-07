@@ -1,12 +1,94 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pranjal Agarwal</title>
+    <style>
+      :root {
+        color: #18324a;
+        background: #f7fbff;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      * { box-sizing: border-box; }
+
+      body { margin: 0; }
+
+      header {
+        background: #b9e2f5;
+        padding: 2rem 1.25rem 0;
+      }
+
+      .site-header,
+      main {
+        margin: 0 auto;
+        max-width: 760px;
+      }
+
+      h1 {
+        margin: 0 0 1.25rem;
+        font-size: clamp(2rem, 5vw, 3rem);
+      }
+
+      nav { display: flex; gap: 0.5rem; }
+
+      .tab {
+        border: 0;
+        border-radius: 0.4rem 0.4rem 0 0;
+        background: transparent;
+        color: #18324a;
+        cursor: pointer;
+        font: inherit;
+        padding: 0.7rem 1rem;
+      }
+
+      .tab[aria-selected="true"] {
+        background: #f7fbff;
+        font-weight: 700;
+      }
+
+      main { padding: 2.5rem 1.25rem; }
+
+      h2 { margin-top: 0; }
+
+      [hidden] { display: none; }
+    </style>
   </head>
   <body>
-    <h1>Pranjal Agarwal</h1>
-    <p>Physics PhD candidate and researcher in quantum computation.</p>
-    <p>Website under construction.</p>
+    <header>
+      <div class="site-header">
+        <h1>Pranjal Agarwal</h1>
+        <nav aria-label="Main navigation" role="tablist">
+          <button class="tab" id="home-tab" type="button" role="tab" aria-selected="true" aria-controls="home-panel">Home</button>
+          <button class="tab" id="teaching-tab" type="button" role="tab" aria-selected="false" aria-controls="teaching-panel">Teaching</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home-panel" role="tabpanel" aria-labelledby="home-tab">
+        <h2>Home</h2>
+        <p>Pranjal Agarwal is a PhD candidate in Physics at CUNY whose work focuses on theoretical quantum computation and quantum information.</p>
+      </section>
+
+      <section id="teaching-panel" role="tabpanel" aria-labelledby="teaching-tab" hidden>
+        <h2>Teaching</h2>
+        <p>Pranjal has taught various courses across New York City at Baruch College, Hunter College, and the University of New York.</p>
+      </section>
+    </main>
+
+    <script>
+      const tabs = document.querySelectorAll('[role="tab"]');
+      const panels = document.querySelectorAll('[role="tabpanel"]');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((item) => item.setAttribute('aria-selected', item === tab));
+          panels.forEach((panel) => panel.hidden = panel.id !== tab.getAttribute('aria-controls'));
+        });
+      });
+    </script>
   </body>
 </html>
