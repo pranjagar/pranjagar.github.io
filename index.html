@@ -3,92 +3,88 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pranjal Agarwal is a physics PhD candidate working in quantum information, quantum algorithms, and scientific computing." />
     <title>Pranjal Agarwal</title>
-    <style>
-      :root {
-        color: #18324a;
-        background: #f7fbff;
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-      }
-
-      * { box-sizing: border-box; }
-
-      body { margin: 0; }
-
-      header {
-        background: #b9e2f5;
-        padding: 2rem 1.25rem 0;
-      }
-
-      .site-header,
-      main {
-        margin: 0 auto;
-        max-width: 760px;
-      }
-
-      h1 {
-        margin: 0 0 1.25rem;
-        font-size: clamp(2rem, 5vw, 3rem);
-      }
-
-      nav { display: flex; gap: 0.5rem; }
-
-      .tab {
-        border: 0;
-        border-radius: 0.4rem 0.4rem 0 0;
-        background: transparent;
-        color: #18324a;
-        cursor: pointer;
-        font: inherit;
-        padding: 0.7rem 1rem;
-      }
-
-      .tab[aria-selected="true"] {
-        background: #f7fbff;
-        font-weight: 700;
-      }
-
-      main { padding: 2.5rem 1.25rem; }
-
-      h2 { margin-top: 0; }
-
-      [hidden] { display: none; }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <div class="site-header">
-        <h1>Pranjal Agarwal</h1>
-        <nav aria-label="Main navigation" role="tablist">
-          <button class="tab" id="home-tab" type="button" role="tab" aria-selected="true" aria-controls="home-panel">Home</button>
-          <button class="tab" id="teaching-tab" type="button" role="tab" aria-selected="false" aria-controls="teaching-panel">Teaching</button>
-        </nav>
-      </div>
+    <header class="site-header">
+      <nav class="nav-wrap" aria-label="Primary navigation">
+        <a class="site-name" href="index.html">Pranjal Agarwal</a>
+        <div class="nav-links">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="research.html">Research</a>
+          <a href="projects.html">Projects</a>
+          <a href="teaching.html">Teaching</a>
+        </div>
+      </nav>
     </header>
 
     <main>
-      <section id="home-panel" role="tabpanel" aria-labelledby="home-tab">
-        <h2>Home</h2>
-        <p>Pranjal Agarwal is a PhD candidate in Physics at CUNY whose work focuses on theoretical quantum computation and quantum information.</p>
+      <section class="hero page-shell">
+        <p class="eyebrow">Physics · Quantum Information · Scientific Computing</p>
+        <h1>Pranjal Agarwal</h1>
+        <p class="hero-copy">
+          I am a PhD candidate in Physics at the CUNY Graduate Center, based at Hunter College.
+          My work focuses on theoretical quantum computation and quantum information, with an
+          emphasis on quantum algorithms, sensing, and numerical simulation.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="research.html">Explore my research</a>
+          <a class="button secondary" href="teaching.html">View teaching</a>
+        </div>
       </section>
 
-      <section id="teaching-panel" role="tabpanel" aria-labelledby="teaching-tab" hidden>
-        <h2>Teaching</h2>
-        <p>Pranjal has taught various courses across New York City at Baruch College, Hunter College, and the University of New York.</p>
+      <section class="section page-shell" aria-labelledby="work-heading">
+        <div class="section-heading">
+          <p class="eyebrow">What I do</p>
+          <h2 id="work-heading">Research, software, and teaching</h2>
+        </div>
+        <div class="card-grid three-column">
+          <article class="card">
+            <span class="card-number">01</span>
+            <h3>Research</h3>
+            <p>Quantum-state learning, quantum sensing, and interference-based quantum algorithms.</p>
+            <a class="text-link" href="research.html">Research overview <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card">
+            <span class="card-number">02</span>
+            <h3>Projects</h3>
+            <p>Python simulation tools, optimization studies, and an award-winning educational prototype.</p>
+            <a class="text-link" href="projects.html">Selected projects <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card">
+            <span class="card-number">03</span>
+            <h3>Teaching</h3>
+            <p>College physics and astronomy instruction across New York City institutions.</p>
+            <a class="text-link" href="teaching.html">Teaching overview <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section accent-section">
+        <div class="page-shell split">
+          <div>
+            <p class="eyebrow">A practical research approach</p>
+            <h2>From mathematical models to working simulations</h2>
+          </div>
+          <p>
+            My work combines analytical reasoning with custom Python software. I build numerical
+            experiments, compare optimization methods, and test computational results against
+            analytical baselines.
+          </p>
+        </div>
       </section>
     </main>
 
-    <script>
-      const tabs = document.querySelectorAll('[role="tab"]');
-      const panels = document.querySelectorAll('[role="tabpanel"]');
-
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          tabs.forEach((item) => item.setAttribute('aria-selected', item === tab));
-          panels.forEach((panel) => panel.hidden = panel.id !== tab.getAttribute('aria-controls'));
-        });
-      });
-    </script>
+    <footer class="site-footer">
+      <div class="page-shell footer-wrap">
+        <p>Pranjal Agarwal · New York, NY</p>
+        <div>
+          <a href="mailto:pranjalagarwal12@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/pranjagar12">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
