@@ -3,83 +3,111 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Pranjal Agarwal is a physics PhD candidate working in quantum information, quantum algorithms, and scientific computing." />
+    <meta name="description" content="Pranjal Agarwal: physics PhD candidate at CUNY, quantum information researcher, and college physics educator in New York." />
     <title>Pranjal Agarwal</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="nav-wrap" aria-label="Primary navigation">
-        <a class="site-name" href="index.html">Pranjal Agarwal</a>
+        <a class="site-name" href="index.html">Pranjal Agarwal<span class="site-location">New York, NY</span></a>
         <div class="nav-links">
           <a href="index.html" aria-current="page">Home</a>
           <a href="research.html">Research</a>
           <a href="projects.html">Projects</a>
           <a href="teaching.html">Teaching</a>
           <a href="personal.html">Personal Projects</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero page-shell">
         <div class="hero-main">
-          <p class="eyebrow">Physics · Quantum Information · Scientific Computing</p>
-          <h1>Pranjal Agarwal</h1>
-          <p class="hero-copy">
-            I am a PhD candidate in Physics at the CUNY Graduate Center, based at Hunter College.
-            My work focuses on theoretical quantum computation and quantum information, with an
-            emphasis on quantum algorithms, sensing, and numerical simulation.
-          </p>
+          <p class="eyebrow">Physics &amp; quantum information</p>
+          <h1>Pranjal<br />Agarwal<span class="title-dot" aria-hidden="true">.</span></h1>
+          <p class="hero-copy">I study quantum information and teach physics in New York.</p>
+          <p class="hero-detail">I am a Physics PhD candidate at the CUNY Graduate Center, based at Hunter College. My research explores what we can learn from quantum measurements and how quantum systems can be used for computation and sensing.</p>
           <div class="button-row">
-            <a class="button primary" href="research.html">Explore my research</a>
-            <a class="button secondary" href="teaching.html">View teaching</a>
+            <a class="button primary" href="teaching.html">Teaching &amp; courses <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="research.html">Research <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <aside class="margin-note" aria-label="Location and affiliation">
-          <span class="margin-note-mark">01</span>
-          <p>CUNY<br />New York</p>
+        <aside class="hero-aside" aria-label="At a glance">
+          <div class="signal-sketch" aria-hidden="true">
+            <svg viewBox="0 0 300 235" fill="none">
+              <path d="M15 118H285M150 18V217" stroke="currentColor" opacity=".18" />
+              <ellipse cx="150" cy="118" rx="106" ry="43" stroke="currentColor" stroke-width="1.4" transform="rotate(-32 150 118)" />
+              <ellipse cx="150" cy="118" rx="106" ry="43" stroke="currentColor" stroke-width="1.4" transform="rotate(32 150 118)" />
+              <circle cx="150" cy="118" r="72" stroke="currentColor" opacity=".5" />
+              <circle cx="150" cy="118" r="6" fill="currentColor" />
+              <circle cx="237" cy="61" r="6" fill="#c28155" />
+              <circle cx="63" cy="61" r="4" fill="currentColor" />
+              <circle cx="197" cy="172" r="4" fill="currentColor" />
+            </svg>
+          </div>
+          <dl class="at-a-glance">
+            <div><dt>Based at</dt><dd>Hunter College<br />CUNY Graduate Center</dd></div>
+            <div><dt>In the classroom</dt><dd>Physics &amp; astronomy<br />Teaching since 2022</dd></div>
+          </dl>
         </aside>
       </section>
 
-      <section class="section page-shell" aria-labelledby="work-heading">
-        <div class="section-heading">
-          <p class="eyebrow">What I do</p>
-          <h2 id="work-heading">Research, software, and teaching</h2>
+      <section class="section page-shell" aria-labelledby="explore-heading">
+        <div class="section-heading section-heading-inline">
+          <p class="eyebrow">Explore</p>
+          <h2 id="explore-heading">A few parts of my work</h2>
         </div>
         <div class="card-grid three-column editorial-grid">
           <article class="card">
-            <span class="card-number">01</span>
-            <h3>Research</h3>
-            <p>Quantum-state learning, quantum sensing, and interference-based quantum algorithms.</p>
-            <a class="text-link" href="research.html">Research overview <span aria-hidden="true">→</span></a>
+            <span class="card-number">01 / Research</span>
+            <h3>Questions about quantum information</h3>
+            <p>Learning about unknown quantum states, detecting patterns, and using interference in quantum algorithms.</p>
+            <a class="text-link" href="research.html">Topics &amp; papers <span aria-hidden="true">↗</span></a>
           </article>
           <article class="card">
-            <span class="card-number">02</span>
-            <h3>Projects</h3>
-            <p>Python simulation tools, optimization studies, and an award-winning educational prototype.</p>
-            <a class="text-link" href="projects.html">Selected projects <span aria-hidden="true">→</span></a>
+            <span class="card-number">02 / Teaching</span>
+            <h3>Making physics approachable</h3>
+            <p>Lectures, labs, and recitations for students with different backgrounds, supported by free learning resources.</p>
+            <a class="text-link" href="teaching.html">Courses &amp; approach <span aria-hidden="true">↗</span></a>
           </article>
           <article class="card">
-            <span class="card-number">03</span>
-            <h3>Teaching</h3>
-            <p>College physics and astronomy instruction across New York City institutions.</p>
-            <a class="text-link" href="teaching.html">Teaching overview <span aria-hidden="true">→</span></a>
+            <span class="card-number">03 / Projects</span>
+            <h3>Building things with code</h3>
+            <p>Scientific simulations and an educational prototype for exploring quantum computing.</p>
+            <a class="text-link" href="projects.html">Selected projects <span aria-hidden="true">↗</span></a>
           </article>
         </div>
       </section>
 
-      <section class="section accent-section">
-        <div class="page-shell split">
+      <section class="section background-section">
+        <div class="page-shell background-layout">
           <div>
-            <p class="eyebrow">A practical research approach</p>
-            <h2>From mathematical models to working simulations</h2>
+            <p class="eyebrow">A little background</p>
+            <h2>Learning, across disciplines and places.</h2>
+            <p>I studied physics in India and advanced technologies in Mexico before continuing my doctoral research in New York. Alongside research, I have taught more than 25 sections of college physics and astronomy to more than 1,000 students.</p>
+            <p>My teaching work includes creating free course materials and using demonstrations and simulations to help students connect the mathematics to physical ideas.</p>
           </div>
-          <p>
-            My work combines analytical reasoning with custom Python software. I build numerical
-            experiments, compare optimization methods, and test computational results against
-            analytical baselines.
-          </p>
+          <div class="education-list" aria-label="Education">
+            <div><span class="education-year">In progress</span><h3>PhD in Physics</h3><p>CUNY Graduate Center</p></div>
+            <div><span class="education-year">2025</span><h3>MPhil in Physics</h3><p>Hunter College, CUNY</p></div>
+            <div><span class="education-year">2023</span><h3>MS in Advanced Technologies</h3><p>National Polytechnic Institute, Mexico</p></div>
+            <div><span class="education-year">2019</span><h3>BS in Physics</h3><p>Shiv Nadar University, India · Minor in Mathematics</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section page-shell contact-section" id="contact" aria-labelledby="contact-heading">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-heading">Get in touch.</h2>
+          <p>For research, teaching, or a conversation about a project.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:pranjalagarwal12@gmail.com">pranjalagarwal12@gmail.com <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/pranjagar12">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </section>
     </main>
@@ -87,10 +115,7 @@
     <footer class="site-footer">
       <div class="page-shell footer-wrap">
         <p>Pranjal Agarwal · New York, NY</p>
-        <div>
-          <a href="mailto:pranjalagarwal12@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/pranjagar12">LinkedIn</a>
-        </div>
+        <div><a href="mailto:pranjalagarwal12@gmail.com">Email</a><a href="https://www.linkedin.com/in/pranjagar12">LinkedIn</a></div>
       </div>
     </footer>
   </body>
